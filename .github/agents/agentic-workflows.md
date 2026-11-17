@@ -45,6 +45,7 @@ This is a **dispatcher agent** that routes your request to the appropriate speci
 - **Git-backed work queues**: Routes to `work-queue` instructions for producers, dispatchers, workers, observers, deployment and recovery
 - **Local SDLC issue bootstrap**: Follow `.github/aw/squad.md`.
 
+
 Workflows may optionally include:
 
 - **Project tracking / monitoring** (GitHub Projects updates, status reporting)
@@ -272,3 +273,4 @@ gh aw compile --validate
 - **Single-file output**: When creating a workflow, produce exactly **one** workflow `.md` file. Do not create separate documentation files (architecture docs, runbooks, usage guides, etc.). If documentation is needed, add a brief `## Usage` section inside the workflow file itself.
 - **Triggering runs**: Only where permitted and human-validated under `debug-agentic-workflow.md`, prefer `gh aw run <workflow-name>` over `gh workflow run <file>.lock.yml` for workflow resolution, input validation and run-tracking. Use the reviewed remote ref; explicit no-dispatch rules override user requests.
 - **CLI commands reference**: For a complete guide on all `gh aw` commands and their MCP tool equivalents (for restricted environments), see `https://raw.githubusercontent.com/github/gh-aw/main/.github/aw/cli-commands.md`
+- When creating or editing agentic workflow files, do not compile them. Only create or update the markdown workflow file.- 
